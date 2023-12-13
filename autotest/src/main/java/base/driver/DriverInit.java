@@ -7,8 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class DriverInit {
     private static volatile WebDriver driver = null;
 
-    private DriverInit() {
-    }
+    private DriverInit() {}
 
     public synchronized static WebDriver getDriver() {
         if (driver == null) {
