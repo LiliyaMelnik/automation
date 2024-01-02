@@ -4,7 +4,9 @@ import po.demoqa.ButtonsPage;
 import po.demoqa.DroppablePage;
 import po.demoqa.FramesPage;
 import po.demoqa.UploadDownloadPage;
+import po.w3.TablePage;
 
+import static base.driver.DriverInit.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ActionsTest extends BaseTest {
@@ -76,5 +78,13 @@ public class ActionsTest extends BaseTest {
         assertThat(uploadText)
                 .as("The text must be")
                 .isEqualTo("C:\\fakepath\\" + UploadDownloadPage.file);
+    }
+    @Test
+    void getTableColumns() {
+        getDriver().get("https://www.w3schools.com/html/html_tables.asp");
+        String text = new TablePage().clickAccept().tableValue(3,3);
+        assertThat(text)
+                .as("The text must be")
+                .isEqualTo("Austria");
     }
 }
