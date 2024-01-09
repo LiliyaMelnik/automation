@@ -1,9 +1,9 @@
-package js;
+package selenium.js;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
-import static base.driver.DriverInit.getDriver;
+import static selenium.base.driver.DriverInit.getDriver;
 
 public class JavaScriptMethods {
 

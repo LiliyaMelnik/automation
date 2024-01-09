@@ -1,9 +1,11 @@
-import base.methods.BaseMethods;
+package selenium;
+
+import selenium.base.methods.BaseMethods;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import static base.driver.DriverInit.getDriver;
-import static base.driver.DriverInit.quit;
+import static selenium.base.driver.DriverInit.getDriver;
+import static selenium.base.driver.DriverInit.quit;
 
 
 public class BaseTest extends BaseMethods {

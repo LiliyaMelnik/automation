@@ -1,15 +1,14 @@
-package base.methods;
+package selenium.base.methods;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import selenium.base.driver.DriverInit;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
-
-import static base.driver.DriverInit.getDriver;
 
 public class BaseMethods {
     private WebDriverWait wait = null;
@@ -55,7 +54,7 @@ public class BaseMethods {
     }
 
     private WebDriverWait waits(Duration time) {
-        return wait = new WebDriverWait(getDriver(), time);
+        return wait = new WebDriverWait(DriverInit.getDriver(), time);
     }
 
 }

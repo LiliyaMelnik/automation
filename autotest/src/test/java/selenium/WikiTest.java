@@ -1,9 +1,11 @@
-import builders.LoginBuilder;
+package selenium;
+
+import selenium.builders.LoginBuilder;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import po.wiki.ArticlePage;
-import po.wiki.LoginPage;
-import po.wiki.SearchPage;
+import selenium.po.wiki.ArticlePage;
+import selenium.po.wiki.LoginPage;
+import selenium.po.wiki.SearchPage;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

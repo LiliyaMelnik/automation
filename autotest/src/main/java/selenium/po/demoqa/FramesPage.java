@@ -1,12 +1,10 @@
-package po.demoqa;
+package selenium.po.demoqa;
 
-import base.methods.BaseMethods;
+import selenium.base.methods.BaseMethods;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import po.wiki.SearchPage;
 
-import static base.driver.DriverInit.getDriver;
+import static selenium.base.driver.DriverInit.getDriver;
 
 public class FramesPage extends BaseMethods{
 

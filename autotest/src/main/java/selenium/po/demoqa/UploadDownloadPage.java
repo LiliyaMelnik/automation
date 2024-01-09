@@ -1,9 +1,9 @@
-package po.demoqa;
+package selenium.po.demoqa;
 
-import base.methods.BaseMethods;
+import selenium.base.methods.BaseMethods;
 import org.openqa.selenium.By;
 
-import static base.driver.DriverInit.getDriver;
+import static selenium.base.driver.DriverInit.getDriver;
 
 public class UploadDownloadPage extends BaseMethods {
     private static final By uploadButton = By.xpath("//input[@id='uploadFile']");

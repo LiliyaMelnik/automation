@@ -1,6 +1,6 @@
-package builders;
+package selenium.builders;
 
-import po.wiki.LoginPage;
+import selenium.po.wiki.LoginPage;
 
 public class LoginBuilder {
 

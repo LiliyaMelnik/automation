@@ -1,11 +1,11 @@
-package po.demoqa;
+package selenium.po.demoqa;
 
-import base.methods.BaseMethods;
+import selenium.base.methods.BaseMethods;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import static base.driver.DriverInit.getDriver;
+import static selenium.base.driver.DriverInit.getDriver;
 
 public class DroppablePage extends BaseMethods {
     private static final By drag = By.xpath("//div[@id='draggable']");

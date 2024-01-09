@@ -1,10 +1,14 @@
-import org.testng.annotations.Test;
-import po.demoqa.AlertsPage;
-import po.demoqa.ButtonsPage;
-import po.demoqa.DroppablePage;
-import po.demoqa.FramesPage;
-import po.demoqa.UploadDownloadPage;
+package selenium;
 
+import org.testng.annotations.Test;
+import selenium.po.demoqa.AlertsPage;
+import selenium.po.demoqa.ButtonsPage;
+import selenium.po.demoqa.DroppablePage;
+import selenium.po.demoqa.FramesPage;
+import selenium.po.demoqa.UploadDownloadPage;
+import selenium.po.w3.TablePage;
+
+import static selenium.base.driver.DriverInit.getDriver;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ActionsTest extends BaseTest {
@@ -76,5 +80,13 @@ public class ActionsTest extends BaseTest {
         assertThat(uploadText)
                 .as("The text must be")
                 .isEqualTo("C:\\fakepath\\" + UploadDownloadPage.file);
+    }
+    @Test
+    void getTableColumns() {
+        getDriver().get("https://www.w3schools.com/html/html_tables.asp");
+        String text = new TablePage().clickAccept().tableValue(3,3);
+        assertThat(text)
+                .as("The text must be")
+                .isEqualTo("Austria");
     }
 }

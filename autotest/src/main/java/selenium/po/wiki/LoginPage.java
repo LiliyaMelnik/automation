@@ -1,6 +1,6 @@
-package po.wiki;
+package selenium.po.wiki;
 
-import base.methods.BaseMethods;
+import selenium.base.methods.BaseMethods;
 import org.openqa.selenium.By;
 
 public class LoginPage extends BaseMethods {
