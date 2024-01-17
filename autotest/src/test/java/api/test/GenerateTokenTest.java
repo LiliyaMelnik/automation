@@ -1,18 +1,27 @@
 package api.test;
 
-import api.dto.response.UserResponse;
+import api.step.BookSteps;
 import api.step.UserSteps;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 
 public class GenerateTokenTest {
 
-    @Test
-    void generateToken() {
-        UserResponse rT = new UserSteps().generateToken();
+    private final UserSteps userSteps = new UserSteps();
+    private final BookSteps bookSteps = new BookSteps();
 
-        assertThat(rT.getResult()).isEqualTo("User authorized successfully.");
-        assertThat(rT.getStatus()).isEqualTo("Success");
+    @Test
+    void addAndDeleteBook() {
+        bookSteps.addBookToUser();
+        var responseUser = userSteps.getUser();
+        assertThat(responseUser.getBooks().get(0).getTitle()).isEqualTo("Git Pocket Guide");
+
+        bookSteps.deleteBook();
+        var finalResponse = userSteps.getUser();
+        assertThat(finalResponse.getBooks()).isEqualTo(List.of());
     }
 }
