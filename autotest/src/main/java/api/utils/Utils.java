@@ -12,7 +12,4 @@ public class Utils {
         return new Gson().toJson(object);
     }
 
-    public static <T> T fromJson(String json, Class<T> classOfT) {
-        return new Gson().fromJson(json, classOfT);
-    }
 }

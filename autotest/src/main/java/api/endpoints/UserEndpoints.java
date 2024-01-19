@@ -1,11 +1,12 @@
 package api.endpoints;
 
-public enum Endpoints {
-    GENERATE_TOKEN("/Account/v1/GenerateToken");
+public enum UserEndpoints {
+    GENERATE_TOKEN("/Account/v1/GenerateToken"),
+    GET_USER("/Account/v1/User/");
 
     private final String endpoints;
 
-    Endpoints(String endpoints) {
+    UserEndpoints(String endpoints) {
         this.endpoints = endpoints;
     }
 
