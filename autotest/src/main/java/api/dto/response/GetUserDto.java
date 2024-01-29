@@ -1,4 +1,4 @@
-package api.dto.request;
+package api.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
+
+public class GetUserDto {
     private int id;
     private String username;
     private String firstName;

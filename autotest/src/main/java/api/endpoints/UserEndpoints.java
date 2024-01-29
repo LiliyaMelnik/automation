@@ -1,8 +1,9 @@
 package api.endpoints;
 
 public enum UserEndpoints {
-    GENERATE_TOKEN("/Account/v1/GenerateToken"),
-    GET_USER("/Account/v1/User/");
+    ADD_USER("v2/user/"),
+    GET_USER("v2/user/"),
+    DELETE_USER("v2/user/");
 
     private final String endpoints;
 
