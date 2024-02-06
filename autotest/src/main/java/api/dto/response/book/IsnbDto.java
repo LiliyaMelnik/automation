@@ -1,15 +1,16 @@
-package api.dto.request;
+package api.dto.response.book;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-public class UserDto {
-    private String userName;
-    private String password;
+@Builder
+@NoArgsConstructor
+public class IsnbDto {
+
+    private String isbn;
+
 }
