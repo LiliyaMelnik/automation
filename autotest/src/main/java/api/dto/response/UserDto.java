@@ -10,7 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UserDto {
-    private int code;
-    private String type;
-    private String message;
+    private String token;
+    private Object expires;
+    private Object status;
+    private Object result;
 }

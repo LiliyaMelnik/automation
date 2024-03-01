@@ -3,12 +3,11 @@ package api.builders;
 import api.dto.request.UserDto;
 
 public class UserBuilders {
-    public static final String defaultUser = "Lil";
 
     public UserDto userDefaultBuilder() {
         return UserDto.builder()
-                .id(123)
-                .username(defaultUser)
+                .userName("user13")
+                .password("12345678Qa!")
                 .build();
     }
 }
